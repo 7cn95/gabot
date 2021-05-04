@@ -14,30 +14,16 @@ app.listen(process.env.PORT);
   //const request = require("request");
   //const os = require("os");
   const grtest = "-467915990";
-  const git = "-1001377351458";
   const grit = "-1001293310963";
   const apiw ="https://api.openweathermap.org/data/2.5/weather?q=basra&appid=b09e577d404588c53ec044641b104683";
   const meetjson = require("./meet.json");
   const options = {
     webHook: {
-      // Port to which you should bind is assigned to $PORT variable
-      // See: https://devcenter.heroku.com/articles/dynos#local-environment-variables
       port: process.env.PORT
-      // you do NOT need to set up certificates since Heroku provides
-      // the SSL certs already (https://<app-name>.herokuapp.com)
-      // Also no need to pass IP because on Heroku you need to bind to 0.0.0.0
     }
   };
-  // Heroku routes from port :443 to $PORT
-  // Add URL of your app to env variable or enable Dyno Metadata
-  // to get this automatically
-  // See: https://devcenter.heroku.com/articles/dyno-metadata
   const url = process.env.APP_URL || 'https://i7cnbota.herokuapp.com:443';
   const bot = new TelegramBot(TOKEN, {polling:true});
-  
-  
-  // This informs the Telegram servers of the new webhook.
-  // Note: we do not need to pass in the cert, as it already provided
   bot.setWebHook(`${url}/bot${TOKEN}`);
   
   
@@ -57,6 +43,9 @@ app.listen(process.env.PORT);
       bot.sendMessage(grtest, `${msg.text}\n @${msg.from.username}`);
     }
     switch (msg.text) {
+      case "hu si":
+        gabot();
+        break;
       case "رابط نظم معلومات":
       case "رابط نظم":
       case "رابط علياء":
@@ -96,6 +85,18 @@ app.listen(process.env.PORT);
         break;
     }
   });
+  ////////////////
+  function gabot() {
+    bot.sendMessage(
+      grit,
+      `[انتبااااه تحضرو رح تبدي محاضرة اللياقة البدنية \n](${
+        meetjson.meet[3]
+      })`,
+      {
+        parse_mode: "Markdown"
+      }
+    );
+  }
   ////////////////
   bot.onText(/\/movie (.+)/, (msg, match) => {
     var movie = match[1];
@@ -306,13 +307,11 @@ app.listen(process.env.PORT);
               break;
           }
           bot.sendMessage(
-            grit,
+            grtest,
             `صباح الخير على الجميع  🌹 💜\n ❁اتمنى لكم يوم ممتع❁ \n   ❀❀❀❀❀❀ \n ♡اليوم درجة الحرارة ${temp} °C والجو ${wtype} \n  ✵✵✵✵✵✵ \n استمتعو باوقاتكم ꨄ`
           );
         }
       });
     }
-  
-    ///////////////////////////////////
   }, 1000);
   //
