@@ -9,7 +9,7 @@ app.listen(process.env.PORT);
 
 
   /////////////////////////////////
-  const TOKENA = process.env.TELEGRAM_TOKEN || '1766261594:AAHM3rTWk7cclDE-k0LOdJ8KhC1Qy2CUwVI';
+  const TOKEN = process.env.TELEGRAM_TOKEN || '1766261594:AAHM3rTWk7cclDE-k0LOdJ8KhC1Qy2CUwVI';
   const TOKENB = process.env.TELEGRAM_TOKEN || '1673477572:AAFgULfebhcxyVduuyI2tqawyzbEkbj5-BY';
   const TelegramBot = require('node-telegram-bot-api');
   //const request = require("request");
@@ -23,11 +23,11 @@ app.listen(process.env.PORT);
       port: process.env.PORT
     }
   };
-  const urlA = process.env.APP_URL || 'https://i7cnbota.herokuapp.com:443';
+  const url = process.env.APP_URL || 'https://i7cnbota.herokuapp.com:443';
   const urlA = process.env.APP_URL || 'https://i7cnbotb.herokuapp.com:443';
-  const bot = new TelegramBot(TOKENA, {polling:true});
+  const bot = new TelegramBot(TOKEN, {polling:true});
   const botb = new TelegramBot(TOKENB, {polling:true});
-  bot.setWebHook(`${urlA}/bot${TOKENA}`);
+  bot.setWebHook(`${url}/bot${TOKEN}`);
   botb.setWebHook(`${urlA}/bot${TOKENB}`);
   
   
