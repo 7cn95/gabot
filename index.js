@@ -9,7 +9,8 @@ app.listen(process.env.PORT);
 
 
   /////////////////////////////////
-  const TOKEN = process.env.TELEGRAM_TOKEN || '1766261594:AAHM3rTWk7cclDE-k0LOdJ8KhC1Qy2CUwVI';
+  const TOKENA = process.env.TELEGRAM_TOKEN || '1766261594:AAHM3rTWk7cclDE-k0LOdJ8KhC1Qy2CUwVI';
+  const TOKENB = process.env.TELEGRAM_TOKEN || '1673477572:AAFgULfebhcxyVduuyI2tqawyzbEkbj5-BY';
   const TelegramBot = require('node-telegram-bot-api');
   //const request = require("request");
   //const os = require("os");
@@ -22,9 +23,12 @@ app.listen(process.env.PORT);
       port: process.env.PORT
     }
   };
-  const url = process.env.APP_URL || 'https://i7cnbota.herokuapp.com:443';
-  const bot = new TelegramBot(TOKEN, {polling:true});
-  bot.setWebHook(`${url}/bot${TOKEN}`);
+  const urlA = process.env.APP_URL || 'https://i7cnbota.herokuapp.com:443';
+  const urlA = process.env.APP_URL || 'https://i7cnbotb.herokuapp.com:443';
+  const bot = new TelegramBot(TOKENA, {polling:true});
+  const botb = new TelegramBot(TOKENB, {polling:true});
+  bot.setWebHook(`${urlA}/bot${TOKENA}`);
+  botb.setWebHook(`${urlA}/bot${TOKENB}`);
   
   
   // Just to ping!
@@ -241,7 +245,7 @@ app.listen(process.env.PORT);
     }
     //////ثلاثاء
     /////اربعاء
-    if (day1 == 3 && hours == 14 && minutes == 20 && seconds == 2) {
+    if (day1 == 3 && hours == 13 && minutes == 20 && seconds == 2) {
       console.log(hours + ":" + minutes + ":" + seconds);
       bot.sendMessage(
         grit,
@@ -251,7 +255,7 @@ app.listen(process.env.PORT);
         }
       );
       gabot(grit);
-    }if (day1 == 3 && hours == 16 && minutes == 20 && seconds == 2) {
+    }if (day1 == 3 && hours == 15 && minutes == 2 && seconds == 2) {
       console.log(hours + ":" + minutes + ":" + seconds);
       bot.sendMessage(
         grit,
@@ -261,7 +265,7 @@ app.listen(process.env.PORT);
         }
       );
       gabot(grit);
-    }if (day1 == 3 && hours == 18 && minutes == 20 && seconds == 2) {
+    }/*if (day1 == 3 && hours == 18 && minutes == 20 && seconds == 2) {
       console.log(hours + ":" + minutes + ":" + seconds);
       bot.sendMessage(
         grit,
@@ -271,7 +275,7 @@ app.listen(process.env.PORT);
         }
       );
       gabot(grit);
-    }if (day1 == 3 && hours == 19 && minutes == 20 && seconds == 2) {
+    }*/if (day1 == 3 && hours == 19 && minutes == 20 && seconds == 2) {
       console.log(hours + ":" + minutes + ":" + seconds);
       bot.sendMessage(
         grit,
