@@ -87,15 +87,7 @@ app.listen(process.env.PORT);
   });
   ////////////////
   function gabot() {
-    bot.sendMessage(
-      grit,
-      `[انتبااااه تحضرو رح تبدي محاضرة اللياقة البدنية \n](${
-        meetjson.meet[3]
-      })`,
-      {
-        parse_mode: "Markdown"
-      }
-    );
+    bot.sendMessage(chatId,`سلملي`);
   }
   ////////////////
   bot.onText(/\/movie (.+)/, (msg, match) => {
