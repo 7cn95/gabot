@@ -1,15 +1,12 @@
-const express = require('express')
-const PORT = process.env.PORT || 5000
-const app = express()
-const port = 3000
+const http = require("http");
+const express = require("express");
+const app = express();
+app.get("/bot", (request, response) => response.sendStatus(200));
+app.get("/", function(req, res) {
+ res.sendFile(__dirname + "/index.html");
+});
+app.listen(process.env.PORT);
 
-app.get('/', (req, res) => {
-  res.send('Hello World!')
-})
-
-app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`)
-})
 
   /////////////////////////////////
   const TOKEN = process.env.TELEGRAM_TOKEN || '1766261594:AAHM3rTWk7cclDE-k0LOdJ8KhC1Qy2CUwVI';
