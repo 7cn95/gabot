@@ -1,0 +1,22 @@
+{
+  "name": "gabot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "##"
+  },
+  "keywords": [
+    "##"
+  ],
+  "author": "hussein",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "node-telegram-bot-api": "^0.53.0"
+  }
+}

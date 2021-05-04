@@ -1,0 +1,18 @@
+{
+"meet":[
+  "https://meet.google.com/aqd-kdbn-vzi",
+  "https://meet.google.com/ufb-nveq-xfm",
+  "https://meet.google.com/ijg-sejc-idg",
+  "https://meet.google.com/jde-nqnx-zkh",
+  "https://meet.google.com/oxw-pwpw-fkm",
+  "https://meet.google.com/fdc-cwnq-vfw"
+],
+"room":{
+    "IS":"https://meet.google.com/aqd-kdbn-vzi",
+    "math":"https://meet.google.com/ufb-nveq-xfm",
+    "IT":"https://meet.google.com/ijg-sejc-idg",
+    "Helthy":"https://meet.google.com/jde-nqnx-zkh",
+    "App":"https://meet.google.com/oxw-pwpw-fkm",
+    "prog":"https://meet.google.com/fdc-cwnq-vfw"
+}
+}
