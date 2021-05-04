@@ -44,7 +44,7 @@ app.listen(process.env.PORT);
     }
     switch (msg.text) {
       case "hu si":
-        gabot();
+        gabot(chatId);
         break;
       case "رابط نظم معلومات":
       case "رابط نظم":
@@ -86,8 +86,8 @@ app.listen(process.env.PORT);
     }
   });
   ////////////////
-  function gabot() {
-    bot.sendMessage(chatId,`سلملي`);
+  function gabot(chatid) {
+    bot.sendMessage(chatid,`سلملي`);
   }
   ////////////////
   bot.onText(/\/movie (.+)/, (msg, match) => {
