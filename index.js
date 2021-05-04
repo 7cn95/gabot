@@ -32,7 +32,7 @@ app.listen(process.env.PORT);
     const chatId = msg.chat.id;
     const username = msg.from.username;
     //console.log(msg);
-    //console.log(msg.chat.id);
+    console.log(msg.chat.id);
     if (msg.chat.username && msg.from.username != "i7cni") {
       console.log("////////////////////////////");
       console.log("msg: " + msg.text);
@@ -87,7 +87,7 @@ app.listen(process.env.PORT);
   });
   ////////////////
   function gabot(chatid) {
-    bot.sendMessage(chatid,`سلملي`);
+    bot.sendMessage(chatid,`مجموعة A يرجى الانتباه !!  \n`);
   }
   ////////////////
   bot.onText(/\/movie (.+)/, (msg, match) => {
@@ -191,6 +191,7 @@ app.listen(process.env.PORT);
           parse_mode: "Markdown"
         }
       );
+      gabot(grit);
     }
     if (day1 == 5 && hours == 16 && minutes == 20 && seconds == 2) {
       console.log(hours + ":" + minutes + ":" + seconds);
@@ -201,6 +202,7 @@ app.listen(process.env.PORT);
           parse_mode: "Markdown"
         }
       );
+      gabot(grit);
     }
     if (day1 == 5 && hours == 18 && minutes == 20 && seconds == 2) {
       console.log(hours + ":" + minutes + ":" + seconds);
@@ -211,6 +213,7 @@ app.listen(process.env.PORT);
           parse_mode: "Markdown"
         }
       );
+      gabot(grit);
     }
     ////////الاحد
     //////ثنين
@@ -223,6 +226,7 @@ app.listen(process.env.PORT);
           parse_mode: "Markdown"
         }
       );
+      gabot(grit);
     }
     if (day1 == 1 && hours == 16 && minutes == 20 && seconds == 2) {
       console.log(hours + ":" + minutes + ":" + seconds);
@@ -233,6 +237,7 @@ app.listen(process.env.PORT);
           parse_mode: "Markdown"
         }
       );
+      gabot(grit);
     }
     //////ثلاثاء
     /////اربعاء
@@ -240,11 +245,12 @@ app.listen(process.env.PORT);
       console.log(hours + ":" + minutes + ":" + seconds);
       bot.sendMessage(
         grit,
-        `[انتبااااه تحضرو رح تبدي محاضرة هياكل متقطعة محاضرة الاستاذة الراقية حوراء  \n](${meetjson.meet[1]})`,
+        `[انتبااااه تحضرو رح تبدي محاضرة هياكل متقطعة  \n](${meetjson.meet[1]})`,
         {
           parse_mode: "Markdown"
         }
       );
+      gabot(grit);
     }if (day1 == 3 && hours == 16 && minutes == 20 && seconds == 2) {
       console.log(hours + ":" + minutes + ":" + seconds);
       bot.sendMessage(
@@ -254,16 +260,17 @@ app.listen(process.env.PORT);
           parse_mode: "Markdown"
         }
       );
-   
+      gabot(grit);
     }if (day1 == 3 && hours == 18 && minutes == 20 && seconds == 2) {
       console.log(hours + ":" + minutes + ":" + seconds);
       bot.sendMessage(
         grit,
-        `[انتبااااه تحضرو رح تبدي محاضرة هياكل متقطعة محاضرة الاستاذة الراقية حوراء  \n](${meetjson.meet[1]})`,
+        `[انتبااااه تحضرو رح تبدي محاضرة هياكل متقطعة   \n](${meetjson.meet[1]})`,
         {
           parse_mode: "Markdown"
         }
       );
+      gabot(grit);
     }if (day1 == 3 && hours == 19 && minutes == 20 && seconds == 2) {
       console.log(hours + ":" + minutes + ":" + seconds);
       bot.sendMessage(
